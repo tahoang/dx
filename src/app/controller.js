@@ -77,7 +77,7 @@ _d.app.Controller = _d.define({
     },
     getDataStore: function () {
         if (typeof this.dataStore != 'undefined')
-            return ESRGC.getStore(this.dataStore);
+            return _d.getStore(this.dataStore);
         else
             return null;
     },
