@@ -36,20 +36,7 @@ _d.define = function (child) {
     }
     else {
         _class_ = function () {
-            /*
-            check if parent's prototype exists
-            this is to eliminate the case where an "invalid" parent object 
-            is passed to child.extend 
-            (for example: bad name or typo makes parent class not exist, therefore, 
-            p has 'undefined' value which does not have a prototype
-            */
-            if (typeof p.prototype != 'undefined') {
-                var parentInit = p.prototype.initialize;
-                if (typeof parentInit == 'function') {
-                    parentInit.apply(this, arguments);
-                }
-            }
-            var init = typeof this.initialize == "function" ? this.initialize : 'undefined';
+            var init = typeof this.initialize == 'function' ? this.initialize : 'undefined';
             //run child initialize function if exists
             if (typeof init == 'function') {
                 init.apply(this, arguments);

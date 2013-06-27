@@ -16,6 +16,7 @@ _d.Component = _d.define({
         this.events[event] = handler;
     },
     initialize: function (options) {
+        //_d.log('initialized component');
         _d.copy(this, options);
     }
 });

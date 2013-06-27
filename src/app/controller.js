@@ -13,6 +13,8 @@ _d.app.Controller = _d.define({
     extend: dx.Component,
     _className: 'dx.app.Controller',
     initialize: function (options) {
+        //call base class' constructor
+        dx.Component.prototype.initialize.apply(this, arguments);
         //create getter for refs
         //return jquery object for the referenced element
         for (var ref in this.refs) {
@@ -50,9 +52,6 @@ _d.app.Controller = _d.define({
                 }
             }
         }
-
-        if (typeof this.init == 'function')
-            this.init();
         _d.log('initialized controller: ' + this.name);
     },
     //Returns an object containing form data

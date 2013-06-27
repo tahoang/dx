@@ -10,14 +10,16 @@ handles ajax requests
 
 */
 
-_d.app.Store = _d.define({
+_d.data.Store = _d.define({
     extend: dx.Component,
-    _className: 'dx.app.Store',
+    _className: 'dx.data.Store',
     model: '',
     dataRoot: '',
     type: 'json',
     autoLoad: false, //default
     initialize: function (options) {
+        //call base class' constructor
+        dx.Component.prototype.initialize.apply(this, arguments);
         //run init function in sub class
         if (typeof this.init == 'function')
             this.init.apply(this, options);

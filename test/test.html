@@ -7,10 +7,32 @@
     <script src="../src/class.js" type="text/javascript"></script>
     <script src="../src/component.js" type="text/javascript"></script>
     <script src="../src/app/application.js" type="text/javascript"></script>
+    <script src="../src/app/controller.js" type="text/javascript"></script>
+    <script src="../src/app/model.js" type="text/javascript"></script>
+    <script src="../src/app/view.js" type="text/javascript"></script>
+    <script src="../src/data/store.js" type="text/javascript"></script>
 </head>
 <body>
     <script type="text/javascript">
-        var comp = new dx.Component();
+        dx.defineController('Test', {
+            initialize: function () {
+                //call base class' constructor
+                TestApp.app.controller.Test.parent.initialize.apply(this, arguments);
+                dx.log('Test1 constructor');
+            }
+        });
+        dx.defineController('Test2', {
+            extend: dx.app.controller.Test,
+            initialize: function () {
+                //call base class' constructor
+                dx.app.controller.Test2.parent.initialize.apply(this, arguments);
+                dx.log('test2 constructor');
+            }
+        });
+        dx.application({
+            name: 'TestApp',
+            controllers: ['Test', 'Test2']
+        });
     </script>
 </body>
 </html>
