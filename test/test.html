@@ -16,10 +16,10 @@
     });
     //controller Test2 extends Test
     dx.defineController('Test2', {
-      extend: TestApp.app.controller.Test,
+      extend: dx.app.controller.Test,
       initialize: function () {
         //call base class' constructor
-        dx.app.controller.Test2.parent.initialize.apply(this, arguments);
+        TestApp.app.controller.Test2.parent.initialize.apply(this, arguments);
         dx.log('test2 constructor');
       }
     });
