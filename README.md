@@ -17,7 +17,7 @@ A JavaScript framework built for quick application setup  using mvc architecture
       extend: TestApp.app.controller.Test,
       initialize: function () {
         //call base class' constructor
-        dx.app.controller.Test2.parent.initialize.apply(this, arguments);
+        TestApp.app.controller.Test2.parent.initialize.apply(this, arguments);
         dx.log('test2 constructor');
       }
     });
