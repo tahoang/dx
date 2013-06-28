@@ -25,8 +25,7 @@ A JavaScript framework built for quick application setup  using mvc architecture
       name: 'TestApp',
       controllers: ['Test', 'Test2']
     });
-
-		```
+```
 		New controllers, models, and views, created by defineController(),
 		defineModel(), and defineView(), are located in dx.app.controller, dx.app.model,
 		and dx.app.view namespaces. Same goes with store (defined by defineStore()), they 
