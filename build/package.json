@@ -1,0 +1,10 @@
+﻿{
+  "name": "dx",
+  "description": "JavaScript framework for mvc",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "uglify-js": "2.3.x",
+    "less": "1.4.x"
+  }
+}

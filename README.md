@@ -1,7 +1,8 @@
 dx
 ==
 
-A JavaScript framework built upon JQuery for quick application setup  using mvc architecture.
+A JavaScript framework built for quick application setup  using mvc architecture.
+Used in conjunction with JQuery.
 
 ==
 ```javascript
