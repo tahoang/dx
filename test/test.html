@@ -6,6 +6,7 @@
 </head>
 <body>
   <script type="text/javascript">
+    //define a new controller extends from base controller
     dx.defineController('Test', {
       initialize: function () {
         //call base class' constructor
@@ -13,8 +14,9 @@
         dx.log('Test1 constructor');
       }
     });
+    //controller Test2 extends Test
     dx.defineController('Test2', {
-      extend: dx.app.controller.Test,
+      extend: TestApp.app.controller.Test,
       initialize: function () {
         //call base class' constructor
         dx.app.controller.Test2.parent.initialize.apply(this, arguments);
