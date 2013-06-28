@@ -1,11 +1,11 @@
-dx
+###dx
 ==
 
 A JavaScript framework built for quick application setup  using mvc architecture.
 Used in conjunction with JQuery.
-
-==
 ####Example
+==
+
 ```javascript
   dx.defineController('Test', {
     initialize: function () {
