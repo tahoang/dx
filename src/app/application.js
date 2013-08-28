@@ -36,7 +36,7 @@ _d.app.Application = _d.define({
       var store = this.stores[i];
       scope._stores.push(new scope.data.store[store]());
     }
-    //create stores
+    //create models
     for (var i in this.models) {
       var model = this.models[i];
       scope._models.push(new scope.app.model[model]());
