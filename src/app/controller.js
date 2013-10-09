@@ -75,11 +75,11 @@ _d.app.Controller = _d.define({
                 for (var k in fields) {
                     var f = fields[k];
                     if (field.name == f.name) {
-                        valueArray.push(field.value);
+                        valueArray.push(f.value);
                     }
                 }
                 if (valueArray.length > 1) {
-                    formData[field.name] = arrayFields;
+                    formData[field.name] = valueArray;
                 }
                 else {
                     formData[field.name] = field.value;
