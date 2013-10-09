@@ -162,20 +162,27 @@ _d.data.Store = _d.define({
         var paramStr = [];
         for (var i in this.params) {
             var paramValue = this.params[i];
-            paramStr.push(i + '=' + paramValue);
+            if (paramValue instanceof Array) {
+                for (var k in paramValue) {
+                    paramStr.push(i + '=' + paramValue[k]);
+                }
+            }
+            else
+                paramStr.push(i + '=' + paramValue);
         }
         //use default url if url wasn't provided through parameter
         if (typeof url == 'undefined')
             url = this.url;
 
         //concatenate params to url
-        for (var x = 0; x < paramStr.length; x++) {
-            if (x == 0 && paramStr.length > 0)
-                url += '?' + paramStr[x]
-            else if (paramStr.length > 0) {
-                url += '&' + paramStr[x]
-            }
-        }
+        //for (var x = 0; x < paramStr.length; x++) {
+        //    if (x == 0 && paramStr.length > 0)
+        //        url += '?' + paramStr[x]
+        //    else if (paramStr.length > 0) {
+        //        url += '&' + paramStr[x]
+        //    }
+        //}
+        url += '?' + paramStr.join('&');
         if (this.type == 'jsonp')
             url += '&outFields=&f=json&callback=?';
         return url;
