@@ -49,6 +49,8 @@ if (typeof _d == 'undefined' || !_d) {
                 prototype.extend = _d.app.View; //base prototype for view
             //set class name 
             prototype._className = 'dx.app.view.' + name;
+            //set name
+            prototype.name = name;
             scope.app.view[name] = _d.define(prototype);
         },
         defineModel: function (name, prototype) {
@@ -59,6 +61,8 @@ if (typeof _d == 'undefined' || !_d) {
                 prototype.extend = _d.app.Model; //base prototype for model
             //set class name 
             prototype._className = 'dx.app.model.' + name;
+            //set name
+            prototype.name = name;
             scope.app.model[name] = _d.define(prototype);
         },
         defineStore: function (name, prototype) {
@@ -69,6 +73,8 @@ if (typeof _d == 'undefined' || !_d) {
                 prototype.extend = _d.data.Store; //base prototype for store
             //set class name 
             prototype._className = 'dx.data.store.' + name;
+            //set name
+            prototype.name = name;//instance name
             scope.data.store[name] = _d.define(prototype);
         },
         /*
