@@ -36,7 +36,7 @@ _d.data.Store = _d.define({
             this.events.beforeLoad.call(scope, this); //used to update url parameters
 
         if (typeof this.url == 'undefined') {
-            log('No url was defined. ' + this._className + '.loadJson()');
+            _d.log('No url was defined. ' + this._className + '.loadJson()');
             return;
         }
 
@@ -106,7 +106,7 @@ _d.data.Store = _d.define({
             this.events.beforeLoad.call(scope, this); //used to update url parameters
 
         if (typeof this.url == 'undefined') {
-            log('No url was defined. ' + this.CLASSNAME + '.loadContent()');
+            _d.log('No url was defined. ' + this.CLASSNAME + '.loadContent()');
             return;
         }
         //call back to process result
@@ -138,7 +138,7 @@ _d.data.Store = _d.define({
             this.events.beforeLoad.call(scope, this); //used to update url parameters
 
         if (typeof url == 'undefined') {
-            log('No url was defined. ' + this.CLASSNAME + '.loadContentUrl()');
+            _d.log('No url was defined. ' + this.CLASSNAME + '.loadContentUrl()');
             return;
         }
         //call back to process result
@@ -197,13 +197,13 @@ _d.data.Store = _d.define({
         if (typeof this.data != 'undefined') {
             return this.data;
         }
-        else { log('store ' + this.ClassName + ' has no data'); }
+        else { _d.log('store ' + this.ClassName + ' has no data'); }
     },
     getResponseData: function () {
         if (typeof this.originalData != 'undefined')
             return this.originalData;
         else
-            log('store ' + this.ClassName + ' has no response data');
+            _d.log('store ' + this.ClassName + ' has no response data');
     },
     getRecord: function (field, value) {
         if (typeof this.data != 'undefined') {
