@@ -13,6 +13,7 @@ if (typeof _d == 'undefined' || !_d) {
             view: {},
             controller: {}
         },
+        map: {},
         data: {
             store: {}
         },
