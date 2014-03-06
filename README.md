@@ -27,6 +27,8 @@ A JavaScript framework built for quick application setup  using mvc architecture
     });
 ```
 #####Notes
+The library provides Class, inheritance infrastructure using dx.define() function. 
+
 New controllers, models, and views, created by defineController(),
 defineModel(), and defineView(), are located in dx.app.controller, dx.app.model,
 and dx.app.view namespaces. Same goes with store (defined by defineStore()), they 
