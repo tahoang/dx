@@ -11,7 +11,8 @@ var result = UglifyJS.minify([
     "../src/app/model.js",
     "../src/app/view.js",
     "../src/data/store.js",
-    '../src/map/mapViewer.js'
+    '../src/map/mapViewer.js',
+    '../src/map/leafletViewer.js'
   ], {
   outSourceMap: "dx.js.map",
   output: { beautify: true }
