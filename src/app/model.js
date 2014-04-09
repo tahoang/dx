@@ -10,7 +10,8 @@ _d.app.Model = _d.define({
   _className: 'dx.app.Model',
   initialize: function (options) {
     //call base class' constructor
-    dx.Component.prototype.initialize.apply(this, arguments);
+      dx.Component.prototype.initialize.apply(this, arguments);
+      dx.log('Initialized model: ' + this.name);
   },
   fields: {}
 });
