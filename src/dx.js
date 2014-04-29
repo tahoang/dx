@@ -25,7 +25,7 @@ if (typeof _d == 'undefined' || !_d) {
                 console.log(msg);
         },
         application: function (options) {
-            this.appInstance = new _d.app.Application(options);
+            this.appDefinition = new _d.app.Application(options);
         },
         /* 
         Helper functions used to define model, view, controller, and store classes
