@@ -36,8 +36,6 @@ _d.define = function(child) {
     }
     else {
         _class_ = function() {
-            if (p.prototype.initialize === 'function')
-                p.prototype.initialize.apply(this, arguments);
             var init = typeof this.initialize == 'function' ? this.initialize : 'undefined';
             //run child initialize function if exists
             if (typeof init == 'function') {
